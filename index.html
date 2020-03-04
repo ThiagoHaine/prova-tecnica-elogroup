@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <link href="./lib/css/principal.css" rel="stylesheet">
+        <meta charset="utf-8">
+        <title>Prova Técnica Thiago Haine</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <form action="http://localhost:8080/" onsubmit="return processa(this);">
+            <div id="toast" class="accordion fechado"></div>
+            <input type="text" name="nome" placeholder="Nome" required>
+            <input type="text" name="telefone" placeholder="Telefone">
+            <select name="como-conheceu">
+                <option value="" selected disabled>Como nos conheceu</option>
+                <option value="tv">Tv</option>
+                <option value="internet">Internet</option>
+                <option value="outros">Outros</option>
+            </select>
+            <p>Possi rede social?</p>
+            <div onclick="mostraOpcoes();">
+                <label><input type="radio" name="possui-rede-social" value="sim" > Sim</label>
+                <label><input type="radio" name="possui-rede-social" value="nao" checked> Não</label>
+            </div>
+
+            <div id="rs-options" class="accordion fechado">
+                <p>Quais?</p>
+                <label><input type="checkbox" name="rede-social" data-value="facebook"> Facebook</label>
+                <label><input type="checkbox" name="rede-social" data-value="linkedin"> Linkedin</label>
+                <label><input type="checkbox" name="rede-social" data-value="instagram"> Instagram</label>
+            </div>
+            <button id="btnEnviar" type="submit">Enviar</button>
+        </form>
+
+        <script src="./lib/js/principal.js"></script>
+    </body>
+</html>
